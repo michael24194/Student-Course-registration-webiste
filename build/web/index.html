@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+Name : Michael Fikry
+ID   : 20120292
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        
+        <title>Mini-university App</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            table, th, td 
+            {
+                border:0.5px solid;
+            }
+            th, td 
+            {
+                padding: 5px;
+            }
+        </style>
+        <script>
+            function check(form)
+            {
+                var name = form.sID.value.toString();//document.forms["formm"]["sID"].value;
+                var pass = form.sPass.value;
+                if (name ==="" || pass ==="")
+                {
+                    alert("Fill in the whole form");    
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </head>
+    
+        <h1> Welcome to  mini university web app </h1> <br>
+        <h3> please enter your ID and password </h3> <br> <br> <br> <br>
+        <form action="checkExistance" name="formm" id="form" method="post" onsubmit=" return check(form); ">
+            <table>
+            <tr>
+                <td>ID</td>
+                <td><input type="text" name="sID"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="sPass"></td> 
+            </tr>
+            </table>
+            <br> <br>
+            <input type="submit" value="Show available Courses">
+        </form> 
+    
+</html>
